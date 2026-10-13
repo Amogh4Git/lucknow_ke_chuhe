@@ -1,0 +1,10 @@
+# Infrasonic Sewer Clog Detection Digital Twin System
+# Core requirements for synthetic data, signal processing, ML modeling, and dashboard
+
+numpy
+scipy
+torch
+scikit-learn
+matplotlib
+streamlit
+pytest
