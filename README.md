@@ -5,6 +5,8 @@
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.25+-ff4b4b.svg)](https://streamlit.io/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+> "Disclaimer: This is an ai-slop version of what our project will look like, it's just for reference. :)" - Amogh
+
 An AI-driven subsurface acoustic Digital Twin system for real-time non-invasive detection, severity classification, and high-precision localization of blockages in municipal sewer networks using infrasonic wave reflectometry and Multi-Task 1D Convolutional Neural Networks (1D-CNN).
 
 ---
