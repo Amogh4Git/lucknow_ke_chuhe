@@ -1,17 +1,42 @@
-# Project Rules: Infrasonic Sewer Clog Detection Digital Twin
+# Antigravity Project Rules: Infrasonic Sewer Clog Detection Digital Twin
 
-## Python Version Compatibility
-- Maintain compatibility with Python 3.10+.
-- Avoid using features or syntax incompatible with Python 3.10+.
+## 1. Python Compatibility
+- All project code must support Python 3.10 or newer.
+- Use standard Python packaging and import conventions.
+- Avoid deprecated APIs and platform-specific assumptions.
 
-## Code Quality and Architecture
-- **Modular Code Design**: Structure code into cleanly decoupled modules under `src/` (`physics`, `signal`, `models`, `dashboard`).
-- **Type Hints**: All function and class signatures must include explicit type hints (`typing` / built-in generics).
-- **Documentation**: All public modules, functions, classes, and methods must have descriptive docstrings explaining their purpose, parameters, return types, and potential exceptions.
+## 2. Code Quality
+- Follow PEP 8 style conventions across all modules.
+- Use clear type hints for functions, methods, and variables.
+- Add concise, meaningful docstrings to modules, classes, and public functions.
+- Prefer small, reusable, single-responsibility modules.
+- Keep physics simulation, signal processing, machine learning, and dashboard logic separate.
+- Use meaningful constants instead of unexplained magic numbers.
+- Handle invalid inputs and numerical edge cases explicitly.
 
-## Testing Standards
-- Comprehensive unit tests are strictly required for:
-  - Physics modules (`src/physics/`): Synthetic acoustic signal generation, pipe wave propagation, and attenuation.
-  - Signal processing modules (`src/signal/`): Cross-correlation, time-difference-of-arrival (TDOA), spectral analysis, and feature extraction.
-- All tests must be integrated with the `pytest` test suite in `tests/`.
-- Ensure deterministic or seeded test cases for signal and acoustic simulation verification.
+## 3. Scientific and Signal-Processing Practices
+- Document signal units, sampling frequency, assumptions, and parameters.
+- Use deterministic random seeds in tests.
+- Keep synthetic data generation reproducible.
+- Clearly distinguish simulated data from real sensor measurements.
+- Do not present synthetic model outputs as validated real-world clog detections.
+
+## 4. Testing Requirements
+- Unit tests are mandatory for `src/physics/` and `src/signal/`.
+- Use pytest as the testing framework.
+- Test normal inputs, invalid inputs, boundary conditions, and numerical behavior.
+- Keep tests independent of external services and physical hardware.
+- Ensure tests are deterministic and suitable for repeated local execution.
+- Run the full test suite before you report task completion.
+
+## 5. Documentation Requirements
+- Maintain `README.md` with project purpose, architecture overview, setup steps, and test commands.
+- Document the responsibilities of each module.
+- Update documentation when the repository structure or setup changes.
+- Never document a command as successful unless it has executed and succeeded.
+
+## 6. Development Boundaries
+- Do not introduce unnecessary dependencies.
+- Inspect existing files before you modify them.
+- Keep generated datasets, model checkpoints, virtual environments, caches, and secrets out of version control.
+- Request user confirmation before you make destructive changes.

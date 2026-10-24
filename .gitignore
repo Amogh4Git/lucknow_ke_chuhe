@@ -14,10 +14,19 @@ env/
 .coverage
 htmlcov/
 
-# PyTorch models and weights
-*.pt
-*.pth
+# Logs and environment variables
+*.log
+.env
+.env.*
 
-# OS generated files
+# Generated datasets and large model artifacts
+data/
+datasets/
+saved_models/*.pt
+saved_models/*.pth
+
+# IDE and Operating System metadata
+.vscode/
+.idea/
 .DS_Store
 Thumbs.db
